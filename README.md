@@ -56,6 +56,7 @@ sh
 
 4️⃣ Use QuaggaJS or ZXing JavaScript libraries to read barcodes from live camera feed, and auto-fill product details during billing.
 
+---
 
 ### ❓ Why It's Not Fully Implemented (Yet)
 
@@ -67,12 +68,14 @@ Barcode scanners vary significantly based on industry & scale:
 
 📌 So to keep QuickBill flexible, only a sample camera scanner interface is provided—you can easily plug in your preferred scanning method depending on your domain.
 
-##⚡ How It Works?
+## ⚡ How It Works?
 1️⃣ Admin or User logs in with credentials.
 2️⃣ Navigate to Home for product operations, or Sell for billing.
 3️⃣ Products are added to the bill dynamically and quantities tracked.
 4️⃣ Hit Generate Bill to display a session-based breakdown.
 5️⃣ For barcode testing, open camera via the integrated scanner preview.
+
+---
 
 ## 🛠 Tech Stack
 Flask (Python) – Core backend framework
@@ -90,6 +93,7 @@ QuaggaJS / ZXing – (Optional) For barcode scanning
 
 💡 Customizable for both offline local use and scalable cloud integration (future-ready)!
 
+---
 
 ### 📸 Screenshots
 
@@ -134,6 +138,7 @@ sh
 
      http://localhost:5000
 
+---
 
 ## 🧠 Final Thoughts
 QuickBill is more than a basic billing app—
