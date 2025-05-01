@@ -108,10 +108,25 @@ def sell():
 def report():
     if 'user' not in session:
         return redirect('/')
+
     daily_sales = sum(s['final_price'] for s in sales)
-    total_expenses = sum(item['price'] * item['stock'] for item in inventory)
-    net_profit = daily_sales - total_expenses
-    return render_template('report.html', sales=sales, total_revenue=daily_sales, total_expenses=total_expenses, net_profit=net_profit)
+
+    cost_price_total = 0
+    for s in sales:
+        for item in inventory:
+            if item['name'] == s['name']:
+                cost_price_total += item['price'] * s['quantity']
+                break
+
+    net_profit = daily_sales - cost_price_total
+
+    return render_template('report.html', 
+        sales=sales, 
+        total_revenue=daily_sales, 
+        total_expenses=cost_price_total, 
+        net_profit=net_profit
+    )
+
 
 @app.route('/customer_history/<customer_name>')
 @app.route('/customer_history', methods=['GET', 'POST'])
