@@ -70,9 +70,13 @@ Barcode scanners vary significantly based on industry & scale:
 
 ## ⚡ How It Works?
 1️⃣ Admin or User logs in with credentials.
+
 2️⃣ Navigate to Home for product operations, or Sell for billing.
+
 3️⃣ Products are added to the bill dynamically and quantities tracked.
+
 4️⃣ Hit Generate Bill to display a session-based breakdown.
+
 5️⃣ For barcode testing, open camera via the integrated scanner preview.
 
 ---
