@@ -1,1 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Login & Register</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      background: linear-gradient(135deg, #667eea, #764ba2);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: 'Segoe UI', sans-serif;
+      color: white;
+    }
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 340px;
+    }
+    .form-box {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 40px;
+      border-radius: 16px;
+      backdrop-filter: blur(12px);
+      box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+      width: 100%;
+      text-align: center;
+      animation: floatIn 1s ease forwards;
+      display: none;
+    }
+    .form-box.active {
+      display: block;
+    }
+    h2 {
+      margin-bottom: 20px;
+      color: #fff;
+    }
+    input {
+      width: 90%;
+      padding: 10px;
+      margin: 10px 0;
+      border: none;
+      border-radius: 8px;
+      outline: none;
+      font-size: 16px;
+    }
+    button {
+      padding: 10px 20px;
+      background: #ff7e5f;
+      border: none;
+      border-radius: 8px;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+    button:hover {
+      background: #feb47b;
+    }
+    .toggle-link {
+      margin-top: 10px;
+      background: none;
+      border: none;
+      color: #fff;
+      cursor: pointer;
+      text-decoration: underline;
+      font-size: 14px;
+    }
+    @keyframes floatIn {
+      from { transform: translateY(-30px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Login Form -->
+    <form class="form-box active" id="loginForm" method="POST" action="/">
+      <h2>🔐 Login</h2>
+      <input type="text" name="username" placeholder="Username" required><br>
+      <input type="password" name="password" placeholder="Password" required><br>
+      <button type="submit">Login</button>
+      <button class="toggle-link" type="button" onclick="toggleForms()">Don't have an account? Register</button>
+    </form>
+
+    <!-- Register Form -->
+    <form class="form-box" id="registerForm" method="POST" action="/register">
+      <h2>📝 Register</h2>
+      <input type="text" name="username" placeholder="Username" required><br>
+      <input type="password" name="password" placeholder="Password" required><br>
+      <input type="text" name="role" placeholder="Role (admin/user)" required><br>
+      <button type="submit">Register</button>
+      <button class="toggle-link" type="button" onclick="toggleForms()">Already have an account? Login</button>
+    </form>
+  </div>
+
+  <script>
+    function toggleForms() {
+      document.getElementById("loginForm").classList.toggle("active");
+      document.getElementById("registerForm").classList.toggle("active");
+    }
+  </script>
+</body>
+</html>
 
