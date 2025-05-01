@@ -95,10 +95,15 @@ QuaggaJS / ZXing – (Optional) For barcode scanning
 
 
 ## 🧾 Sample Use Cases
+
 🛍️ Stationery Store
+
 🍔 College Canteens
+
 🧪 Lab Inventory Management
+
 💊 Medical Counters
+
 🛒 Pop-up Retail Booths
 
 💡 Customizable for both offline local use and scalable cloud integration (future-ready)!
