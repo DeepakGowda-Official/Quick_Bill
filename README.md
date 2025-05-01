@@ -82,11 +82,17 @@ Barcode scanners vary significantly based on industry & scale:
 ---
 
 ## 🛠 Tech Stack
+
 Flask (Python) – Core backend framework
+
 HTML5 + CSS3 – Frontend design
+
 JavaScript – Camera access, dynamic forms
+
 python-barcode & Pillow – (Optional) Barcode generation
+
 QuaggaJS / ZXing – (Optional) For barcode scanning
+
 
 ## 🧾 Sample Use Cases
 🛍️ Stationery Store
