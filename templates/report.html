@@ -1,1 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sales Report</title>
+  <style>
+    body {
+      background: linear-gradient(120deg, #141e30, #243b55);
+      color: white;
+      font-family: 'Segoe UI', sans-serif;
+      padding: 40px;
+      text-align: center;
+      animation: fadeIn 2s ease-in-out;
+    }
+    h1 {
+      margin-bottom: 30px;
+      font-size: 3em;
+      color: #ffcc00;
+      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    }
+    table {
+      width: 90%;
+      margin: 0 auto 30px;
+      border-collapse: collapse;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 12px;
+      overflow: hidden;
+      animation: slideIn 2s ease-in-out;
+    }
+    th, td {
+      padding: 12px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    }
+    th {
+      background: rgba(0, 0, 0, 0.4);
+    }
+    td {
+      background: rgba(255, 255, 255, 0.1);
+    }
+    tr:hover {
+      background-color: rgba(0, 200, 255, 0.1);
+      cursor: pointer;
+    }
+    .summary {
+      font-size: 1.5em;
+      margin-top: 30px;
+      line-height: 1.6em;
+      animation: fadeInUp 2s ease-in-out;
+    }
+    .summary p {
+      margin: 10px 0;
+    }
+    a {
+      color: #00c3ff;
+      text-decoration: none;
+      display: inline-block;
+      margin-top: 30px;
+      font-size: 1.2em;
+      transition: color 0.3s ease;
+    }
+    a:hover {
+      color: #ffcc00;
+    }
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+    @keyframes slideIn {
+      from {
+        transform: translateX(-100%);
+      }
+      to {
+        transform: translateX(0);
+      }
+    }
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>📈 Sales & Profit Report</h1>
+  <table>
+    <tr>
+      <th>Product</th>
+      <th>Quantity</th>
+      <th>Selling Price</th>
+      <th>Discount</th>
+      <th>Tax</th>
+      <th>Customer Name</th>
+      <th>Phone Number</th>
+      <th>Sold By</th>
+      <th>Final Price</th>
+      <th>Date</th>
+    </tr>
+    {% for s in sales %}
+    <tr>
+      <td>{{ s.name }}</td>
+      <td>{{ s.quantity }}</td>
+      <td>₹{{ s.selling_price }}</td>
+      <td>{{ s.discount }}%</td>
+      <td>{{ s.tax }}%</td>
+      <td>{{ s.customer_name }}</td>
+      <td>{{ s.customer_phone }}</td>
+      <td>{{ s.seller }}</td>
+      <td>₹{{ s.final_price }}</td>
+      <td>{{ s.date.strftime('%d-%m-%Y') }}</td>
+    </tr>
+    {% endfor %}
+  </table>
+  <div class="summary">
+    <p>💵 <strong>Total Revenue:</strong> ₹{{ total_revenue }}</p>
+    <p>📉 <strong>Total Expenses:</strong> ₹{{ total_expenses }}</p>
+    <p>💰 <strong>Net Profit:</strong> ₹{{ net_profit }}</p>
+  </div>
+  <a href="/home">⬅ Back to Dashboard</a>
+</body>
+</html>
 
