@@ -15,7 +15,7 @@ Small-scale stores often struggle with **manual billing**, **confusing inventory
 ## 🚨 What Makes QuickBill Stand Out?
 
 ✅ Built using **Flask**, runs locally with **zero deployment cost**.  
-✅ Designed with both **Admin and User roles** for secure access.  
+✅ Designed with both **Admin and Staff roles** for secure access.  
 ✅ Supports **real-time product updates, bill generation**, and **stock checks**.  
 ✅ All product data handled via **session-based management**—no database needed!  
 ✅ Designed for **college mini-stores, stationery shops, and pop-up stalls**.
@@ -26,7 +26,7 @@ Small-scale stores often struggle with **manual billing**, **confusing inventory
 
 ✔️ **Dynamic Inventory:** Add, update, and sell products on the go.  
 ✔️ **Bill Generator:** Generates neat bills instantly with all item details.  
-✔️ **Role-Based Login:** Admin and user interfaces keep operations secure.  
+✔️ **Role-Based Login:** Admin and staff interfaces keep operations secure.  
 ✔️ **Session Data Handling:** No database setup required—ultra-lightweight!  
 ✔️ **Smooth UI:** Gradient color designs for a clean and modern experience.
 
