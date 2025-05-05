@@ -8,7 +8,7 @@
 
 Small-scale stores often struggle with **manual billing**, **confusing inventory records**, and **no digital tracking**—leading to errors and inefficiencies. Large ERP tools are **too bulky, expensive**, and often overkill for their needs.
 
-📌 **QuickBill is different!** It’s a **lightweight**, **web-based**, and **session-driven** solution that brings digital billing to your fingertips—with a clean UI and robust backend support!
+📌 **QuickBill is different!** It’s a **lightweight**, **web-based**, and **cloud-driven** solution that brings digital billing to your fingertips—with a clean UI and robust backend support!
 
 ---
 
@@ -17,7 +17,7 @@ Small-scale stores often struggle with **manual billing**, **confusing inventory
 ✅ Built using **Flask**, runs locally with **zero deployment cost**.  
 ✅ Designed with both **Admin and Staff roles** for secure access.  
 ✅ Supports **real-time product updates, bill generation**, and **stock checks**.  
-✅ All product data handled via **session-based management**—no database needed!  
+✅ All product data handled via **Firebase**—no traditional database setup required! 
 ✅ Designed for **college mini-stores, stationery shops, and pop-up stalls**.
 
 ---
@@ -27,7 +27,7 @@ Small-scale stores often struggle with **manual billing**, **confusing inventory
 ✔️ **Dynamic Inventory:** Add, update, and sell products on the go.  
 ✔️ **Bill Generator:** Generates neat bills instantly with all item details.  
 ✔️ **Role-Based Login:** Admin and staff interfaces keep operations secure.  
-✔️ **Session Data Handling:** No database setup required—ultra-lightweight!  
+✔️ **Firebase Data Handling:** Real-time data management using Firebase.  
 ✔️ **Smooth UI:** Gradient color designs for a clean and modern experience.
 
 ---
@@ -75,7 +75,7 @@ Barcode scanners vary significantly based on industry & scale:
 
 3️⃣ Products are added to the bill dynamically and quantities tracked.
 
-4️⃣ Hit Generate Bill to display a session-based breakdown.
+4️⃣ Hit Generate Bill to display a cloud-based breakdown (via Firebase).
 
 5️⃣ For barcode testing, open camera via the integrated scanner preview.
 
@@ -93,6 +93,7 @@ python-barcode & Pillow – (Optional) Barcode generation
 
 QuaggaJS / ZXing – (Optional) For barcode scanning
 
+Firebase – For real-time cloud-based data management
 
 ## 🧾 Sample Use Cases
 
